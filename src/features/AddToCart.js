@@ -43,17 +43,18 @@ export const cartSlice = createSlice({
 
     changeQuantity: (state, action) => {
       const { id, quantity } = action.payload;
-      const existingItem = state.cartArray.find((item) => item.id === id);
-
-      if (existingItem !== -1) {
+      const existingItemIndex = state.cartArray.findIndex(item => item.id === id);
+    
+      if (existingItemIndex !== -1) {
+        if (quantity > 0) {
+          // Update quantity
+          state.cartArray[existingItemIndex].quantity = quantity;
+        } else {
+          // Remove item from cart
+          state.cartArray.splice(existingItemIndex, 1);
+        }
       }
-      if (quantity > 0) {
-        state.cartArray[existingItem].quantity = quantity;
-      } else {
-        state.cartArray.splice(existingItem, 1);
-
-      }
-    },
+    } ,
 
     removeFromCart: (state, action) => {
       state.cartArray = state.cartArray.filter(
