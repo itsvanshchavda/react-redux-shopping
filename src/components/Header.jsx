@@ -9,12 +9,12 @@ const Header = () => {
 
   return (
     <nav className='w-full h-full py-10 text-white'>
-      <NavLink to='/' className='text-3xl max-sm:text-2xl text-start font-bold text-white px-20 relative top-5 max-xl:top-7 max-xl:right-16 max-xl:text-xl max-sm:right-14 '>
+      <NavLink to='/' className='text-3xl max-sm:text-2xl text-start font-bold text-white px-20 relative top-11 max-xl:top-10 max-xl:right-16 max-xl:text-xl max-sm:right-14 '>
         Shopping <span className='text-indigo-400'>Spot</span>
       </NavLink>
 
       {/* Desktop Navigation */}
-      <ul className='hidden md:flex  justify-center items-center gap-5'>
+      <ul className='hidden md:flex   justify-center items-center gap-5'>
         <li>
           <NavLink to='/' className='text-white'>
             Home
@@ -41,7 +41,7 @@ const Header = () => {
 
       </ul>
 
-      <div className='max-sm:hidden max-xl:hidden max-xl:ml-[23em]'>
+      <div className='max-sm:hidden relative bottom-4 max-xl:left-[10rem]'>
         <CartIcon />
       </div>
 
@@ -78,7 +78,7 @@ const Header = () => {
         </ul>
       )}
 
-      <div className='mx-14 md:hidden static mt-20 '>
+      <div className='mx-14 md:hidden static mt-20 max-sm:mx-18'>
         <CartIcon />
       </div>
     </nav>
