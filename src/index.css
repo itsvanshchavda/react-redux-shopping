@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: rgba(16, 15, 15, 0.973);
+}
+
+.glow {
+  animation: neon-glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes neon-glow {
+  0% {
+      box-shadow: 0 0 5px 5px rgba(237, 6, 52, 0.5);
+  }
+  100% {
+      box-shadow: 0 0 20px 10px rgba(234, 10, 70, 0.8);
+  }
+}
