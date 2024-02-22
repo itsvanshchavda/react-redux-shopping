@@ -47,24 +47,24 @@ const Header = () => {
       </div>
 
       {nav && (
-        <ul className='w-full h-full flex text-xl flex-col justify-center items-center mt-14  gap-2 md:hidden'>
-          <li>
-            <NavLink to='/' className='text-white'>
+        <ul className='w-full h-full flex text-xl flex-col justify-center items-center mt-14  gap-2 md:hidden' onClick={() => setNav(!nav)}>
+          <li >
+            <NavLink to='/' className='text-white' onClick={() => setNav(!nav)}>
               Home
             </NavLink>
-          </li>
-          <li>
-            <NavLink to='/products' className='text-white'>
+          </li >
+          <li >
+            <NavLink to='/' className='text-white' onClick={() => setNav(!nav)}>
               Products
             </NavLink>
           </li>
           <li>
-            <NavLink to='/contact' className='text-white'>
+            <NavLink to='/' className='text-white' onClick={() => setNav(!nav)}>
               Contact Us
             </NavLink>
           </li>
           <li>
-            <NavLink to='/liked' className='text-white'>
+            <NavLink to='/liked' className='text-white' onClick={() => setNav(!nav)}>
               <Wishlist />
             </NavLink>
           </li>
