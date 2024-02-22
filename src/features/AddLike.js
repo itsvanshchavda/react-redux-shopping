@@ -22,9 +22,9 @@ export const likeSlice = createSlice({
       if (!state.likedProducts.find((item) => item.id === productId)) {
         const newItem = {
           id: productId,
-          title: title, // Access payload data here
-          price: price, // Access payload data here
-          thumbnail: thumbnail, // Access payload data here
+          title: title, 
+          price: price, 
+          thumbnail: thumbnail, 
         };
         state.likedProducts.push(newItem);
         localStorage.setItem(

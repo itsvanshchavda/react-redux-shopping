@@ -44,12 +44,12 @@ const ProductAll = ({ item }) => {
         toast.success('Product added to cart');
     }
 
-    // Find the item in the cart based on its ID
+ 
     const findItem = useSelector((state) => {
         if (Array.isArray(state.cart.cartArray)) {
             return state.cart.cartArray.findIndex((cart) => cart.id === item.id) !== -1;
         }
-        return false; // Return a default value if cartArray is not an array
+        return false; 
     });
 
     return (
