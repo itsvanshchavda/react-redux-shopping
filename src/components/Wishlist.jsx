@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 
 const Wishlist = () => {
     const [playedSound, setPlayedSound] = useState(false);
-    const [play] = useSound(notificationSound , { volume: 0.2 });
+    const [play] = useSound(notificationSound , { volume: 0.6 });
     const likedItems = useSelector((state) => state.like.likedProducts) || [];
 
     const handleNotification = () => {
